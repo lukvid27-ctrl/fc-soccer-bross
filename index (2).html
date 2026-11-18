@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FC Soccer Bros</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="game" width="960" height="540"></canvas>
+
+  <!-- Pixel-art loading screen + home background (FC 27 style layout) -->
+  <div id="loader">
+    <div id="lstage">
+      <canvas id="lc" width="960" height="540"></canvas>
+      <div id="home" class="hidden"></div>
+    </div>
+  </div>
+
+  <!-- All menu screens render into this overlay -->
+  <div id="ui"></div>
+
+  <div id="hud" class="hidden">
+    <div id="scoreboard"><span id="hudHome">HOME</span> <b id="hudScore">0 - 0</b> <span id="hudAway">AWAY</span> <span id="hudTime">2:00</span></div>
+    <div id="banner"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
+<script src="teams.js"></script>
+<script src="players.js"></script>
+<script src="multiplayer.js"></script>
+<script src="game.js"></script>
+</body>
+</html>
